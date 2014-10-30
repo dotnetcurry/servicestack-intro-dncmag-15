@@ -1,0 +1,36 @@
+﻿@using StudentReports.Models
+@inherits ViewPage<IEnumerable<Student>>
+
+@{
+    ViewBag.Title = "Student List";
+}
+
+<div class="row">
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Current Class</th>
+                    <th>View Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.City</td>
+                            <td>@item.CurrentClass</td>
+                            <td>
+                                <a href="/marks/student/@item.StudentId">View Marks</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

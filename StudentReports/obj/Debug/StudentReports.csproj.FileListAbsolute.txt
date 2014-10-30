@@ -1,0 +1,44 @@
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\StudentReports.dll.config
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\StudentReports.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\StudentReports.pdb
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Client.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Common.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Interfaces.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.OrmLite.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.OrmLite.SqlServer.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Text.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.xml
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Client.xml
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Common.xml
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.OrmLite.xml
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Text.xml
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\obj\Debug\StudentReports.csprojResolveAssemblyReference.cache
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\obj\Debug\StudentReports.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\obj\Debug\StudentReports.pdb
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Razor.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\System.Web.Razor.dll
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\ServiceStack.Razor.xml
+D:\Learning\VS\ASP.NET\ServiceStack\StudentReports\StudentReports\bin\System.Web.Razor.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\StudentReports.dll.config
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\StudentReports.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\StudentReports.pdb
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Client.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Common.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Interfaces.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.OrmLite.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.OrmLite.SqlServer.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Razor.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Text.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\System.Web.Razor.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Client.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Common.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.OrmLite.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Razor.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\ServiceStack.Text.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\bin\System.Web.Razor.xml
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\obj\Debug\StudentReports.csprojResolveAssemblyReference.cache
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\obj\Debug\StudentReports.dll
+D:\Learning\Publications\Articles\DNC\Introduction to Service Stack\StudentReports\StudentReports\obj\Debug\StudentReports.pdb

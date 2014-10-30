@@ -1,0 +1,206 @@
+﻿@using StudentReports.Models
+@inherits ViewPage<StudentReports.DTOs.MarksGetResponseDto>
+
+@{
+    ViewBag.Title = "Marks of " + Model.Name + " studying in class " + Model.Class;
+}
+
+<div class="row">
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <b>Name: </b>
+            </div>
+            <div class="col-md-3">
+                @Model.Name
+                <input type="hidden" value="@Model.Id" id="hnStudentId" />
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <b>Class: </b>
+            </div>
+            <div class="col-md-3">
+                @Model.Class
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    @{
+        if (Model.Marks == null || Model.Marks.Count() == 0)
+        {
+            <div class="info">No marks added for the student yet.</div>
+        }
+        else
+        {
+            <table class="table" id="tblStudentMarks">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks Awarded</th>
+                        <th>Max Marks</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+            foreach (var item in Model.Marks)
+            {
+                <tr>
+                    <td>@item.Subject</td>
+                    <td>@item.MarksAwarded</td>
+                    <td>@item.MaxMarks</td>
+                    <td>
+                        <button class="btn btn-link" data-marks-id="@item.Id">Update</button>
+                    </td>
+                </tr>
+            }
+                    }
+                </tbody>
+            </table>
+        }
+    }
+    <div class="pull-right">
+        <button id="btnAddMarks" class="btn btn-default">Add Marks</button>
+    </div>
+    <div id="divNewMarks" style="display: none;">
+        <form id="formNewMarks">
+            <input type="hidden" value="@Model.Id" name="studentId" />
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">Subject</div>
+                <div class="col-md-3">
+                    <input name="subject" type="text" id="txtNewSubject" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">Marks Awarded</div>
+                <div class="col-md-3">
+                    <input type="text" name="marksAwarded" id="txtMarksAwarded" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">Max Marks</div>
+                <div class="col-md-3">
+                    <input type="text" id="txtMaxMarks" name="maxMarks" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <input type="reset" value="Reset" class="btn btn-danger" />
+                </div>
+                <div class="col-md-3">
+                    <button id="btnAddNewMarks" class="btn btn-primary">Add</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </form>
+    </div>
+    <div id="divUpdateMarks" style="display: none;">
+        <form id="formUpdateMarks">
+            <input type="hidden" id="hnMarksId" name="id" />
+            <input type="hidden" value="@Model.Id" name="studentId" />
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    Subject
+                </div>
+                <div class="col-md-3">
+                    <input type="text" readonly="readonly" id="txtSubjectUpdate" name="subject" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    Max Marks
+                </div>
+                <div class="col-md-3">
+                    <input type="text" readonly="readonly" id="txtMaxMarksUpdate" name="maxMarks" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    Marks Awarded
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="txtMarksAwardedUpdate" name="marksAwarded" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <input type="reset" value="Reset" class="btn btn-danger" />
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary" id="btnUpdateMarks">Update</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(function () {
+            $("#btnAddMarks").click(function () {
+                $("#divNewMarks").show();
+            });
+
+            $("#btnAddNewMarks").click(function () {
+                var newMarks = $("#formNewMarks").serialize();
+
+                $.post("/marks?format=json", newMarks)
+                    .then(function (result) {
+                        window.location.reload();
+                    });
+            });
+
+            $("#btnUpdateMarks").click(function (e) {
+                e.preventDefault();
+
+                var updatedMarks = {
+                    id: $("#hnMarksId").val(),
+                    subject: $("#txtSubjectUpdate").val(),
+                    maxMarks: $("#txtMaxMarksUpdate").val(),
+                    marksAwarded: $("#txtMarksAwardedUpdate").val(),
+                    studentId: @Model.Id
+                };
+
+                $.ajax({
+                    url: "/marks/" + updatedMarks.id + "?format=json",
+                    type: "PUT",
+                    data: updatedMarks
+                }).then(function () {
+                    window.location.reload();
+                });
+            });
+
+            $("#tblStudentMarks button").on("click", function (event) {
+                var marksId = $(event.currentTarget).data("marksId");
+                $.get("/marks/" + marksId + "?format=json", function (data) {
+                    $("#divUpdateMarks").show();
+                    $("#hnMarksId").val(data.marks[0].id);
+                    $("#txtSubjectUpdate").val(data.marks[0].subject);
+                    $("#txtMaxMarksUpdate").val(data.marks[0].maxMarks);
+                    $("#txtMarksAwardedUpdate").val(data.marks[0].marksAwarded);
+                });
+            });
+        });
+    </script>
+}
